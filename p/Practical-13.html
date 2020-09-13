@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-13</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            border-style: border-box;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        .main-content{
+            width:100%;
+            height:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:40px;
+            color:grey;
+
+        }
+        footer{
+            width:100%;
+            background-color:#26272b;
+        }
+        .sec-1{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding:30px 10px;
+
+        }
+        
+        .about{
+            width:40%;
+
+        }
+        .sec-1 h2{
+            font-size:20px;
+            color:white;
+        }
+     
+        .about p{
+            text-align:justify;
+            line-height:24px;
+            margin-top:10px;
+            color:grey;
+            }
+        .sec-1 ul{
+            color:grey;
+            list-style:none;
+        }   
+        .sec-1 ul li{
+
+           padding:5px;
+        }   
+        a{
+            text-decoration:none;
+            color:grey;
+            padding:5px;
+        }
+        a:hover{
+            color:orangered;
+
+        }
+        span{
+            font-size:15px;
+            padding: 5px;
+            margin: 0;
+            color:grey
+
+        }
+       .fa-home{
+            color: orange;
+        }
+      
+        .fa-envelope{
+            color: red;
+        }
+        .fa-phone-square{
+            color: green;
+        }
+        .fa-facebook-official{
+            color: blue;
+        }
+      
+        .sec-2{
+            border-bottom:3px solid grey;
+            border-top:3px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:20px;
+            padding:30px 25px;
+            color:lavenderblush;
+
+        }
+        .sec-2 a{
+            background-color: #28df99;
+            margin-left:15px;
+            padding:5px 15px;
+            text-decoration:none ;
+            color:white;
+            border-radius:50px;
+
+        }
+    .sec-2 a:hover{
+            background-color:blue;
+            color:white;
+        }
+   .sec-3 {
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:30px;
+            padding:30px 25px;
+            
+            
+            
+
+        }
+.fa{
+            
+
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  
+  text-decoration:none ;
+}
+.fa:hover {
+  opacity: 1
+}
+
+
+.fa-facebook{
+    padding: 20px;
+    margin-right: 10px;
+  background:#1d2d50;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.fa-facebook:hover{
+  background-color: blue;
+}
+
+
+.fa-twitter {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+  
+    background:#cffffe;
+  color: black;
+}
+.fa-twitter:hover{
+ background-color:  skyblue;
+ color:white;
+}
+        
+.fa-google {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#fe7171;
+  color: white;
+}
+.fa-google:hover{
+    background-color:red;
+}
+        
+.fa-linkedin {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#4e89ae;
+  color: white;
+}
+.fa-linkedin:hover{
+    background-color:blue;
+}
+.fa-dribbble {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#ffb0b0;
+  color: white;
+}
+.fa-dribbble:hover{
+
+  
+  background-color:pink;
+}
+        
+.sec-4{
+           background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:15px;
+            padding:25px 25px;
+            color:white;
+
+        }
+.sec-4 a{
+    color:white;
+    
+}
+.sec-4 a:hover{
+    color:orange;
+}
+.sec-4 p{
+    position:relative;
+    z-index:1;
+}
+.sec-4 p::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:3px;
+    background-color: yellow;
+    position:absolute;
+    transition: all .3s;
+
+
+}
+
+.sec-4 p::after{
+    right:0px;
+    bottom:-10px;
+}
+
+.sec-4 p:hover::after{
+    width:100%;
+}
+@media(max-width:767px)
+{
+    .main-content{
+            width:100%;
+            height:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:35px;
+            color:grey;
+
+        }
+        footer{
+            width:100%;
+            background-color:#26272b;
+        }
+        .sec-1{
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            padding:30px 10px;
+
+        }
+        
+        .about{
+            width:100%;
+            margin-bottom: 10px;
+
+        }
+        .sec-1 h2{
+            font-size:20px;
+            color:white;
+        }
+     
+        .about p{
+            text-align:justify;
+            line-height:24px;
+            margin-top:10px;
+            color:grey;
+            }
+        .sec-1 ul{
+            list-style:none;
+        }   
+        .sec-1 ul li{
+           padding:5px;
+        }   
+        a{
+            text-decoration:none;
+            color:grey;
+            padding:5px;
+        }
+        a:hover{
+            color:orangered;
+
+        }
+        span{
+            font-size:15px;
+            padding: 5px;
+            margin: 0;
+
+        }
+        i{
+            color:black;
+            font-size:5px; 
+
+        
+
+        }
+        .fa-home{
+            color: orange;
+        }
+      
+        .fa-envelope{
+            color: red;
+        }
+        .fa-phone-square{
+            color: green;
+        }
+        .fa-facebook-official{
+            color: blue;
+        }
+      
+        .sec-2{
+            border-bottom:3px solid grey;
+            border-top:3px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:20px;
+            padding:30px 25px;
+            color:lavender;
+
+        }
+        .sec-2 a{
+            background-color: #28df99;
+            margin-left:15px;
+            padding:5px 15px;
+            text-decoration:none ;
+            color:white;
+            border-radius:50px;
+
+        }
+    .sec-2 a:hover{
+            background-color:blue;
+            color:white;
+        }
+   .sec-3 {
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:30px;
+            padding:30px 25px;
+            
+            
+            
+
+        }
+.fa{
+            
+
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  
+  text-decoration:none ;
+}
+.fa:hover {
+  opacity: 1
+}
+
+
+.fa-facebook{
+    padding: 20px;
+    margin-right: 10px;
+  background:#1d2d50;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.fa-facebook:hover{
+  background-color: blue;
+}
+
+
+.fa-twitter {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+  
+    background:#cffffe;
+  color: black;
+}
+.fa-twitter:hover{
+ background-color:  skyblue;
+ color:white;
+}
+        
+.fa-google {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#fe7171;
+  color: white;
+}
+.fa-google:hover{
+    background-color:red;
+}
+        
+.fa-linkedin {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#4e89ae;
+  color: white;
+}
+.fa-linkedin:hover{
+    background-color:blue;
+}
+.fa-dribbble {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#ffb0b0;
+  color: white;
+}
+.fa-dribbble:hover{
+
+  
+  background-color:pink;
+}
+        
+.sec-4{
+           background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:15px;
+            padding:25px 25px;
+            color:white;
+
+        }
+.sec-4 a{
+    color:white;
+    
+}
+.sec-4 a:hover{
+    color:orange;
+}
+.sec-4 p{
+    position:relative;
+    z-index:1;
+}
+.sec-4 p::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:3px;
+    background-color: yellow;
+    position:absolute;
+    transition: all .3s;
+
+
+}
+
+.sec-4 p::after{
+    right:0px;
+    bottom:-10px;
+}
+
+.sec-4 p:hover::after{
+    width:100%;
+}   
+}
+    @media(max-width:499px)
+    {
+        .main-content{
+            width:100%;
+            height:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:30px;
+            color:grey;
+
+        }
+        footer{
+            width:100%;
+            background-color:#26272b;
+        }
+        .sec-1{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            padding:30px 10px;
+
+        }
+        
+        .about{
+            width:100%;
+
+        }
+        .sec-1 h2{
+            font-size:20px;
+            color:white;
+            margin-top: 10px;
+        }
+     
+        .about p{
+            text-align:justify;
+            line-height:24px;
+            margin-top:10px;
+            color:grey;
+            }
+        .sec-1 ul{
+            list-style:none;
+        }   
+        .sec-1 ul li{
+           padding:5px;
+        }   
+        a{
+            text-decoration:none;
+            color:grey;
+            padding:5px;
+        }
+        a:hover{
+            color:orangered;
+
+        }
+        span{
+            font-size:15px;
+            padding: 5px;
+            margin: 0;
+
+        }
+        i{
+            color:black;
+            font-size:5px; 
+
+        
+
+        }
+        .fa-home{
+            color: orange;
+        }
+      
+        .fa-envelope{
+            color: red;
+        }
+        .fa-phone-square{
+            color: green;
+        }
+        .fa-facebook-official{
+            color: blue;
+        }
+        .sec-2{
+            border-bottom:3px solid grey ;
+            border-top:3px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:15px;
+            padding:30px 25px;
+            color:lavender;
+
+        }
+        .sec-2 a{
+            background-color: #28df99;
+            margin-left:15px;
+            padding:5px 15px;
+            text-decoration:none ;
+            color:white;
+            border-radius:50px;
+
+        }
+    .sec-2 a:hover{
+            background-color:blue;
+            color:white;
+        }
+   .sec-3 {
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:30px;
+            padding:30px 25px;
+            
+            
+            
+
+        }
+.fa{
+            
+
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  
+  text-decoration:none ;
+}
+.fa:hover {
+  opacity: 1
+}
+
+
+.fa-facebook{
+    padding: 20px;
+    margin-right: 10px;
+  background:#1d2d50;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.fa-facebook:hover{
+  background-color: blue;
+}
+
+
+.fa-twitter {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+  
+    background:#cffffe;
+  color: black;
+}
+.fa-twitter:hover{
+ background-color:  skyblue;
+ color:white;
+}
+        
+.fa-google {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#fe7171;
+  color: white;
+}
+.fa-google:hover{
+    background-color:red;
+}
+        
+.fa-linkedin {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#4e89ae;
+  color: white;
+}
+.fa-linkedin:hover{
+    background-color:blue;
+}
+.fa-dribbble {
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+    background:#ffb0b0;
+  color: white;
+}
+.fa-dribbble:hover{
+
+  
+  background-color:pink;
+}
+        
+.sec-4{
+           background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:15px;
+            padding:25px 25px;
+            color:white;
+
+        }
+.sec-4 a{
+    color:white;
+    
+}
+.sec-4 a:hover{
+    color:orange;
+}
+.sec-4 p{
+    position:relative;
+    z-index:1;
+}
+.sec-4 p::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:3px;
+    background-color: yellow;
+    position:absolute;
+    transition: all .3s;
+
+
+}
+
+.sec-4 p::after{
+    right:0px;
+    bottom:-10px;
+}
+
+.sec-4 p:hover::after{
+    width:100%;
+}
+    }
+    </style>
+</head>
+<body>
+    <section class="main-content">
+        <h1><center>Content Area</center></h1>
+    </section>
+    <footer>
+            <section class="sec-1">
+                <section class="about">
+                    <h2>
+                        ABOUT
+                    </h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio reprehenderit provident sunt vero optio consequatur harum, consequuntur dolor non ipsa veritatis nulla nostrum nam eveniet accusantium cum? Similique ab magni animi laboriosam neque. Accusantium vel officia odit quibusdam, dicta nesciunt cumque dolorem natus vitae repellat eius. Necessitatibus, corrupti aspernatur?</p>
+                </section>
+                <section class="link1">
+                    <h2>
+                        CATEGORIES
+                    </h2>
+                    <ul>
+                        <li><a href="">C</a></li>
+                        <li><a href="">UI Design</a></li>
+                        <li><a href="">PHP</a></li>
+                        <li><a href="">Java</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Hybrid Apps</a></li>
+                    </ul>
+                </section>
+                <section class="link2">
+                    <h2>
+                        QUICK LINKS
+                    </h2>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Contribute</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Sitemap</a></li>
+                        <li><a href="">Disclaimer</a></li>
+                    </ul>
+                </section>
+                <section class="link3">
+                    <h2>
+                            CONTACT US
+                    </h2>
+                    <ul>
+                        <li><i class="fa fa-home"></i><span>SCO-75,Chandigarh,India</span></li>
+                        <li><i class="fa fa-envelope"></i><span>betalabsindia@gmail.com</span></i></li>
+                        <li><i class="fa fa-phone-square"></i><span>Mobile:9729280731</span> </li>
+                        <li><i class="fa fa-facebook-official"></i>
+                        <a href="#">betalabsindia</a>
+                       </li>
+                        
+                    </ul>
+                </section>
+            </section>
+          
+            <section class="sec-2">
+                        <h2>Register for Free</h2>
+                        <a href="#">SIGN UP!</a>
+             </section>
+           
+              
+             <section class="sec-3">
+               
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+            </section>                   
+
+
+         <section class="sec-4">
+                <p>Copyright @ 2020 All Rights Reserved by<a href="https://www.beta-labs.in">Beta-Labs</a></p>
+         </section> 
+         
+    
+</footer>
+</body>
+</html>
