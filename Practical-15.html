@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+        body{
+
+            background-color: skyblue;
+        }
+        h1{
+            color:black;
+            font-size: 60px;
+        }
+        .inc-btn{
+            width:65px;
+            height:50px;
+            background-color:darkblue;
+            border:2px solid white;
+            border-radius: 5px;
+            color:white;
+            font-size: 40px;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;  
+
+        }
+        .dec-btn{
+            background-color:darkblue;
+            border:2px solid white;
+            border-radius: 5px;
+            width:65px;
+            height:50px;
+            color:white;
+            font-size: 40px;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            margin-left: 630px;
+        }
+        .dec-btn:hover{
+            background-color:lightgreen;
+            color:black;
+        }
+        .inc-btn:hover{
+            background-color:lightgreen;
+            color:black;
+        }
+        #number{
+            display:inline;
+            font-size: 30px;
+            padding:20px 30px ;
+            border-radius: 5px;
+            background-color: skyblue;
+            margin-left: 20px;
+            margin-right: 20px;
+            width:40px;
+            height:10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <center><h1>COUNTER</h1></center>
+     <button class="btn dec-btn disabled" type="button" > - </button>
+     <input id="number" value="0"> 
+     <button class="btn inc-btn " type="button"> + </button>
+     <script src="Practical-15.js"></script> 
+</body>
+</html>
