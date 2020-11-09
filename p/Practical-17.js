@@ -1,5 +1,4 @@
-
-    const time = document.getElementById("time");
+const time = document.getElementById("time");
     const greeting = document.getElementById("greeting");
     const name = document.getElementById("name");
     const date = document.getElementById("date");
@@ -35,13 +34,13 @@
       let today = new Date();
       let hour = today.getHours();
       if(hour<12){
-        document.body.style.backgroundImage = `url("../images/morning.jpg")`;
+        document.body.style.backgroundImage = `url("../img/morning.jpg")`;
         greeting.innerHTML = 'Good Morning';
       } else if(hour<18){
-        document.body.style.backgroundImage = `url("../images/afternoon.jpg")`;
+        document.body.style.backgroundImage = `url("../img/afternoon.jpg")`;
         greeting.innerHTML = 'Good Afternoon';
       } else {
-        document.body.style.backgroundImage = `url("../images/night.jpg")`;
+        document.body.style.backgroundImage = `url("../img/evening.jpg")`;
         greeting.innerHTML = 'Good Evening';
         document.body.style.color = "white";
       }
